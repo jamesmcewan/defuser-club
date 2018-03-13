@@ -14,19 +14,17 @@
       align-items: center;
       height: 100%;
       background: #f8f8f2;
+      min-width: 320px;
+      max-width: 3840px;
     }
-
-    body {
-      max-width: 80%;
-    }
-
+    
     h1 {
       background: linear-gradient(#3D0045 30%, #FF3C7F);
       background-clip: text;
       -webkit-background-clip: text;
       color: transparent;
       font-family: 'Share Tech Mono', monospace;
-      font-size: 30vh;
+      font-size: calc(40px + (500 - 40) * ((90vw - 320px) / (3840 - 300)));
     }
 
     h1::selection {
