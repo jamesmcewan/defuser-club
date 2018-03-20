@@ -17,11 +17,13 @@
       min-width: 320px;
       max-width: 3840px;
     }
-    
+
     h1 {
       background: linear-gradient(#3D0045 30%, #FF3C7F);
       background-clip: text;
       -webkit-background-clip: text;
+      border-bottom: 10px solid transparent;
+      box-sizing: border-box;
       color: transparent;
       font-family: 'Share Tech Mono', monospace;
       font-size: calc(40px + (500 - 40) * ((90vw - 320px) / (3840 - 300)));
@@ -33,11 +35,31 @@
       -webkit-background-clip: border-box;
       color: #f8f8f2;
     }
+
+    @keyframes phase {
+      from {
+        border-bottom-color: rgba(61, 0, 69, 0.9);
+      }
+
+      to {
+        border-bottom-color: rgba(61, 0, 69, 0);
+      }
+    }
+
+    .cursor {
+      border-bottom: 10px solid;
+      animation-duration: .75s;
+      animation-name: phase;
+      animation-iteration-count: infinite;
+      animation-direction: alternate;
+    }
   </style>
 </head>
 
 <body>
-  <h1>{&nbsp;...defuser&nbsp;}</h1>
+  <h1>{&nbsp;...defuser&nbsp;
+    <span class="cursor">}</span>
+  </h1>
 </body>
 
 </html>
