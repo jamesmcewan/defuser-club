@@ -8,5 +8,3 @@ pipeline:
       - docker login --username=$DOCKER_USERNAME --password=$DOCKER_PASSWORD
       - docker build -t jamesvmcewan/defuser-club
       - docker push jamesvmcewan/defuser-club
-    volumes:
-      - '/var/run/docker.sock:/var/run/docker.sock'
