@@ -3,7 +3,7 @@ pipeline:
     image: plugins/gcr
     registry: eu.gcr.io
     repo: mcewan-io/defuser-club
-    tags: latest
-    json_key: gstorage
     secrets:
-      - gstorage
+      - google_json
+    tags: latest
+    json_key: google_json
