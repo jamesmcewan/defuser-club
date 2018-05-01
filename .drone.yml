@@ -1,6 +1,6 @@
 pipeline:
   docker:
-    image: 'plugins/docker:17:05'
+    image: 'plugins/docker:17.05'
     debug: true
     launch_debug: true
     repo: jamesvmcewan/defuser-club
