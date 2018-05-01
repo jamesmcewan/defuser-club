@@ -8,5 +8,5 @@ pipeline:
     password: docker_password
     autotag: true
     secrets:
-      - docker_username
       - docker_password
+      - docker_username
