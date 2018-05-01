@@ -1,11 +1,9 @@
 pipeline:
-  docker:
-    image: docker
-    commands:
-      - 'echo ${DOCKER_USERNAME}'
-      - 'echo ${DOCKER_PASSWORD}'
-      - 'echo $${DOCKER_USERNAME}'
-      - 'echo $${DOCKER_PASSWORD}'
+  gcr:
+    image: plugins/gcr
+    registry: us.gcr.io
+    repo: mcewan-io/defuser-club
+    tags: latest
     secrets:
-      - docker_username
-      - docker_password
+      - gcloud_json
+    json_key: gcloud_json
