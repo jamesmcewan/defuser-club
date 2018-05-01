@@ -4,5 +4,6 @@ pipeline:
     registry: eu.gcr.io
     repo: mcewan-io/defuser-club
     tags: latest
+    json_key: gstorage
     secrets:
       - gstorage
