@@ -1,12 +1,11 @@
 pipeline:
   docker:
-    image: plugins/docker
-    debug: true
-    launch_debug: true
-    repo: jamesvmcewan/defuser-club
-    username: docker_username
-    password: docker_password
-    autotag: true
+    image: docker
+    commands:
+      - 'echo ${DOCKER_USERNAME}'
+      - 'echo ${DOCKER_PASSWORD}'
+      - 'echo $${DOCKER_USERNAME}'
+      - 'echo $${DOCKER_PASSWORD}'
     secrets:
-      - docker_password
       - docker_username
+      - docker_password
