@@ -1,12 +1,12 @@
 pipeline:
   docker:
-    image: 'plugins/docker:17.12'
-    debug: true
-    launch_debug: true
-    repo: jamesvmcewan/defuser-club
-    username: docker_username
-    password: docker_password
-    autotag: true
+    image: docker
     secrets:
       - docker_password
       - docker_username
+    command:
+      - docker login --username=$DOCKER_USERNAME --password=$DOCKER_PASSWORD
+      - docker build -t jamesvmcewan/defuser-club
+      - docker push jamesvmcewan/defuser-club
+    volumes:
+      - '/var/run/docker.sock:/var/run/docker.sock'
