@@ -1,9 +1,0 @@
-pipeline:
-  gcr:
-    image: plugins/gcr
-    registry: us.gcr.io
-    repo: mcewan-io/defuser-club
-    tags: latest
-    secrets:
-      - gcloud_json
-    json_key: gcloud_json
