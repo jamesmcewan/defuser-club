@@ -1,6 +1,8 @@
 pipeline:
   docker:
     image: plugins/docker
+    environment:
+      - DOCKER_LAUNCH_DEBUG: true
     repo: jamesvmcewan/defuser-club
     username: docker_username
     password: docker_password
