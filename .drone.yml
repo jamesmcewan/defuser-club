@@ -1,7 +1,7 @@
 pipeline:
   docker:
     image: plugins/docker
-    repo: jamesvmcewan/mce-react
+    repo: jamesvmcewan/defuser-club
     username: docker_username
     password: docker_password
     autotag: true
