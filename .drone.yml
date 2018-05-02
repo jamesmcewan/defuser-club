@@ -6,3 +6,13 @@ pipeline:
     tags: latest
     secrets:
       - gcr_json_key
+  ssh:
+    image: appleboy/drone-ssh
+    host: 206.189.26.21
+    script:
+      - cd server;./images.sh
+    secrets:
+      - ssh_key
+      - ssh_username
+    when:
+      branch: master
