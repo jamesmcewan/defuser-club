@@ -1,8 +1,9 @@
 pipeline:
-  gcr:
-    image: plugins/gcr
-    registry: eu.gcr.io
-    repo: mcewan-io/defuser-club
-    tags: latest
-    secrets:
-      - gcr_json_key
+  ssh:
+    image: appleboy/drone-ssh
+    host: 206.189.26.21
+    volumes:
+      - '/root/drone_rsa:/root/ssh/drone_rsa'
+    key_path: /root/ssh/drone_rsa
+    script:
+      - echo "test ssh"
