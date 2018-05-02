@@ -1,9 +1,10 @@
 pipeline:
   ssh:
     image: appleboy/drone-ssh
-    host: 206.189.26.21
+    host: ssh_host
+    script:
+      - cd server && ./images.sh
     secrets:
+      - ssh_host
       - ssh_key
       - ssh_username
-    script:
-      - echo "test ssh"
