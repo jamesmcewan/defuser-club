@@ -7,3 +7,5 @@ pipeline:
     secrets:
       - ssh_key
       - ssh_username
+    when:
+      branch: master
