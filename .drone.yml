@@ -4,7 +4,7 @@ pipeline:
     script:
       - cd server && ./images.sh
     secrets:
-      - source: ssh_host
-        target: host
       - ssh_key
       - ssh_username
+      - source: ssh_host
+        target: host
