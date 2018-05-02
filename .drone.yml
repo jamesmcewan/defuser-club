@@ -14,6 +14,7 @@ pipeline:
       - server_cmd
       - exit
     secrets:
+      - ssh_key
       - ssh_username
       - server_cmd
     when:
