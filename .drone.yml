@@ -1,7 +1,7 @@
 pipeline:
   ssh:
     image: appleboy/drone-ssh
-    host: ssh_host
+    host: $ssh_host
     script:
       - cd server && ./images.sh
     secrets:
