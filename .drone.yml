@@ -10,11 +10,13 @@ pipeline:
     image: appleboy/drone-ssh
     host: 206.189.26.21
     port: 22
+    volumes:
+      - '/root/id_rsa:/root/ssh/id_rsa'
+    key_path: /root/ssh/id_rsa
     script:
       - server_cmd
       - exit
     secrets:
-      - ssh_key
       - ssh_username
       - server_cmd
     when:
