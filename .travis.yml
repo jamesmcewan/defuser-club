@@ -1,1 +1,11 @@
+language: node_js
 sudo: required
+services:
+  - docker
+before_install:
+  - docker build -t jamesvmcewan/defuser-club .
+deploy:
+  provider: script
+  script: bash deploy.sh
+  on:
+    branch: master
