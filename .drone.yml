@@ -1,14 +1,16 @@
 pipeline:
   gcr:
+    when:
+      branch: master
     image: plugins/gcr
     registry: eu.gcr.io
     repo: mcewan-io/defuser-club
     tags: latest
     secrets:
       - gcr_json_key
+  ssh:
     when:
       branch: master
-  ssh:
     image: appleboy/drone-ssh
     host: 206.189.26.21
     script:
@@ -16,5 +18,3 @@ pipeline:
     secrets:
       - ssh_key
       - ssh_username
-    when:
-      branch: master
